@@ -1,0 +1,102 @@
+.button {
+  padding: 8px 15px;
+  border-radius: 30px;
+  transition: all 0.5s;
+  font-size: 14px;
+  font-weight: 600;
+  &:active {
+    transform: scale(0.98);
+  }
+}
+.button[data-size="small"] {
+  padding: 5px 10px;
+  font-size: 13px;
+}
+.button[data-variant="contained"] {
+  background: var(--ono-primary);
+  color: var(--ono-white);
+
+  &:hover {
+    background: #2cac42;
+    box-shadow: var(--primary-box-shadow);
+  }
+}
+
+.button[data-variant="transparent"] {
+  background: transparent;
+  color: var(--ono-primary);
+  background: var(--ono-select-background);
+  &:hover {
+    background: var(--ono-select-background);
+    box-shadow: var(--primary-box-shadow);
+  }
+}
+.button[disabled] {
+  cursor: not-allowed;
+  background-color: rgb(var(--rgb-primary), 0.5);
+  &:hover {
+    background-color: rgb(var(--rgb-primary), 0.5);
+  }
+}
+.button[data-variant="red"] {
+  background: #f3d7d7;
+}
+// .button[data-shape="round"] {
+//   border-radius: 9999px;
+// }
+.button[data-variant="primaryLight"] {
+  background-color: var(--ono-select-background);
+  color: #2cac42;
+  border: var(--ono-primary);
+}
+.button[data-variant="outlined"] {
+  border: 1.5px solid var(--ono-primary);
+  color: var(--ono-primary);
+}
+.button[data-variant="danger"] {
+  background-color: var(--ono-red);
+  color: white;
+}
+.button[data-variant="lightOrange"] {
+  background: #ffe5da;
+}
+.button[data-variant="lightRed"] {
+  background-color: #fee2e2;
+  color: #dc2626;
+}
+
+.button[data-variant="lightRed"]:hover {
+  background-color: #fecaca;
+}
+.button[data-variant = 'oceanGreen'] {
+  background-color: #EBFFF0;
+}
+.button[data-variant="outlined"] {
+  border: 1px solid #3b82f6;
+  color: #3b82f6;
+}
+.button[data-variant="gray"] {
+  border: 1px solid #d1d5db;
+  color: #000000;
+  background-color: #d1d5db;
+}
+.button[data-variant="outlined-primary"] {
+  border: 1px solid #16a34a;
+  color: #16a34a;
+}
+
+.button[data-variant="outlined"]:hover {
+  background-color: #e0f2fe;
+}
+.button[data-variant="lightBlue"] {
+  background-color: #dceaff;
+  color: var(--ono-blue);
+}
+
+// .round {
+//   border-radius: 9999px;
+// }
+
+// .button[data-shape="box"] {
+//   border-radius: 4px;
+// }

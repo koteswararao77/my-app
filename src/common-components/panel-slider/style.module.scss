@@ -1,0 +1,99 @@
+.panesliderOverlay {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 100;
+  background: rgba(0, 0, 0, 0.5); /* Black overlay with 50% opacity */
+  opacity: 0; /* Initially transparent */
+  visibility: hidden; /* Hide it */
+  transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+}
+
+/* When the panel is open */
+.open {
+  opacity: 1; /* Fully visible */
+  visibility: visible; /* Show it */
+}
+
+.panelSlide {
+  position: fixed;
+  z-index: 102;
+  background-color: white;
+  box-shadow: 0 0px 30.5px #c3c3c3;
+  transition: bottom 0.3s ease; // Smooth slide animation
+  // border-radius: 20px 20px 0px 0px;
+
+  &[data-direction="bottom_to_top"] {
+    bottom: -85vh; // Start off-screen below the viewport
+    height: 85vh; // Panel height: 70% of viewport
+    width: 100%;
+    left: 0;
+    right: 0;
+  }
+
+  // &[data-direction="left_to_right"] {
+  //   right: 100%; // Start fully off-screen (to the left)
+  //   width: 70%; // Example: 70% of viewport width
+  // }
+
+  // &[data-direction="right_to_left"] {
+  //   left: 100%; // Start fully off-screen (to the right)
+  //   width: 70%;
+  // }
+
+  &.open[data-direction="bottom_to_top"] {
+    bottom: 0; // Slide up to align with the viewport bottom
+  }
+
+  &.close[data-direction="bottom_to_top"] {
+    bottom: -85vh; // Slide down off-screen
+  }
+  &[data-direction="left_to_right"] {
+    // right: 100%;
+  }
+
+  &[data-direction="right_to_left"] {
+    right: calc(0px - 100vw);
+    transition: right 0.3s ease 0s;
+    top: 0;
+    height: 100%;
+  }
+
+  &.open {
+    &[data-direction="left_to_right"] {
+      right: 0%;
+    }
+
+    &[data-direction="right_to_left"] {
+      right: 0;
+      // animation-name: righttoleftopen;
+      // animation-duration: 1s;
+      // animation-fill-mode: forwards;
+    }
+  }
+
+  &.close {
+    &[data-direction="left_to_right"] {
+      // left: 0%;
+      // right: unset;
+    }
+
+    &[data-direction="right_to_left"] {
+      right: -100%;
+    }
+  }
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+.closebtn {
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  cursor: pointer;
+  z-index: 103;
+}

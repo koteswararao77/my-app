@@ -1,0 +1,12 @@
+.searchBoxInput {
+  outline: none;
+  padding: 10px;
+  text-indent: 1.5rem;
+  &:focus {
+    // border: 1px solid var(--ono-primary);
+    // box-shadow: 0 0 0 3px rgba(64, 141, 251, 0.16);
+  }
+}
+.searchBoxInput::placeholder {
+  color: var(--ono-sub-text);
+}
