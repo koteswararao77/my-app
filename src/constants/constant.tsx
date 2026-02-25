@@ -33,5 +33,8 @@ export const onoArkAccount = {
   ifsc: "UTIB0CCH274",
 };
 
-export const BASE_URL = "http://localhost:5000/api";
+export const BASE_URL =
+  window.location.hostname === "localhost"
+    ? "http://localhost:5000/api"
+    : "https://my-app-be.onrender.com/api";
 
