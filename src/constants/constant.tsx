@@ -36,5 +36,4 @@ export const onoArkAccount = {
 export const BASE_URL =
   window.location.hostname === "localhost"
     ? "http://localhost:5000/api"
-    : "https://my-app-be.onrender.com/api";
-
+    : "https://my-app-be-l6mj.onrender.com/api";
