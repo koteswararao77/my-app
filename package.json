@@ -2,6 +2,7 @@
   "name": "my-app",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://koteswararao77.github.io/my-app",
   "dependencies": {
     "@emotion/react": "^11.14.0",
     "@emotion/styled": "^11.14.1",
@@ -38,7 +39,9 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -b gh-pages -d build"
   },
   "eslintConfig": {
     "extends": [
@@ -64,6 +67,7 @@
     "@types/react-gauge-chart": "^0.5.0",
     "@types/react-window": "^1.8.8",
     "autoprefixer": "^10.4.19",
+    "gh-pages": "^6.3.0",
     "postcss": "^8.4.38",
     "tailwindcss": "^3.4.1"
   }
