@@ -10,7 +10,7 @@ import Button from "../common-components/button/Button";
 
 const Sidebar = () => {
   const navItems = [
-    
+
     { name: "Form Fields", path: "form-fields", icon: <FiFileText size={18} /> },
     { name: "List Rendering", path: "list-rendering", icon: <FiHome size={18} /> },
     { name: "RTK Query", path: "rtk-query", icon: <FiDatabase size={18} /> },
@@ -21,7 +21,10 @@ const Sidebar = () => {
   const handleLogout = () => {
     localStorage.removeItem("token");
     localStorage.removeItem("user");
-    window.location.href = "/login";
+    window.location.href =
+    window.location.hostname === "localhost"
+        ? "/login"
+        : "/my-app-fe/#/login";
   };
 
   return (
