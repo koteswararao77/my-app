@@ -46,7 +46,7 @@ const Profile = () => {
         };
 
         fetchProfile();
-    }, [navigate]);
+    }, []);
 
     return (
         <div>

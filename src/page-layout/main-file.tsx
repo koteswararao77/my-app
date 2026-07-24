@@ -16,22 +16,25 @@ const MainFile = () => {
 
   return (
 
-    <div className="min-h-screen flex bg-white overflow-hidden">
+    <div className="app-shell min-h-screen flex overflow-hidden">
       <Sidebar />
-      <div className="flex-1 ml-64 flex flex-col">
+      <div className="app-main flex-1 ml-64 flex flex-col">
 
-        <div className="sticky top-0 z-40 px-8 py-4 shadow-sm flex justify-between items-center">
-          <h1 className="text-lg font-semibold tracking-wide">
+        <div className="app-topbar sticky top-0 z-40 px-8 flex justify-between items-center">
+          <div>
+            <p className="app-eyebrow">Workspace</p>
+            <h1 className="text-xl font-bold tracking-tight">
             {getTitle()}
-          </h1>
+            </h1>
+          </div>
           <div>
             <Profile/>
           </div>
         </div>
 
-        <div className="p-8 bg-gray-200">
+        <main className="app-content p-8">
           <Outlet />
-        </div>
+        </main>
 
       </div>
     </div>

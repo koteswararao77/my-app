@@ -34,11 +34,14 @@ const Login = () => {
     };
 
     return (
-        <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-indigo-600 via-blue-500 to-cyan-400 p-4">
-            <div className="w-full max-w-md bg-white p-8 rounded-xl shadow-md">
-                <h2 className="text-2xl font-semibold text-center text-gray-800 mb-6">
+        <div className="skeuo-auth min-h-screen flex items-center justify-center bg-slate-50 p-4 relative overflow-hidden">
+            <div className="absolute inset-0 bg-[radial-gradient(circle_at_15%_20%,rgba(129,140,248,.18),transparent_30%),radial-gradient(circle_at_85%_80%,rgba(96,165,250,.15),transparent_32%)]" />
+            <div className="skeuo-auth-card w-full max-w-md bg-white p-8 sm:p-10 rounded-2xl shadow-[0_20px_60px_rgba(30,41,59,.10)] border border-slate-100 relative">
+                <div className="w-11 h-11 mx-auto mb-5 rounded-xl bg-indigo-600 text-white flex items-center justify-center font-bold">D</div>
+                <h2 className="text-2xl font-bold text-center text-slate-900 mb-2">
                     Welcome Back
                 </h2>
+                <p className="text-sm text-center text-slate-500 mb-7">Sign in to continue to your workspace</p>
 
                 <input
                     type="email"
@@ -51,7 +54,7 @@ const Login = () => {
                             email: e.target.value
                         })
                     }}
-                    className="w-full mb-4 px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-1 focus:ring-blue-500 focus:border-blue-500"
+                    className="w-full mb-4 px-4 py-3 border border-slate-200 rounded-xl text-slate-800 placeholder:text-slate-400 focus:outline-none focus:ring-4 focus:ring-indigo-100 focus:border-indigo-500 transition"
                 />
 
                 <input
@@ -65,12 +68,12 @@ const Login = () => {
                             password: e.target.value
                         })
                     }}
-                    className="w-full mb-6 px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-1 focus:ring-blue-500 focus:border-blue-500"
+                    className="w-full mb-6 px-4 py-3 border border-slate-200 rounded-xl text-slate-800 placeholder:text-slate-400 focus:outline-none focus:ring-4 focus:ring-indigo-100 focus:border-indigo-500 transition"
                 />
 
                 <button
                     onClick={handleLogin}
-                    className="w-full bg-blue-600 text-white py-3 rounded-lg hover:bg-blue-700 transition duration-200"
+                    className="w-full bg-indigo-600 text-white font-semibold py-3 rounded-xl hover:bg-indigo-700 shadow-lg shadow-indigo-200 transition duration-200"
                 >
                     Login
                 </button>

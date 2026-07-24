@@ -1,5 +1,6 @@
 import DetailsGet from "./getDetailsResponse";
 import DetailsPost from "./getDetailsRequest";
+import PixelPerfectChart from "./pixel-perfect-graph";
 
 const RTKQuery = () => {
 
@@ -27,6 +28,8 @@ const RTKQuery = () => {
                     <DetailsPost />
                 </div>
             </div>
+
+            <PixelPerfectChart />
         </div>
     )
 }

@@ -2,11 +2,14 @@
   outline: none;
   padding: 10px;
   text-indent: 1.5rem;
+  border-color: var(--color-line);
+  background: var(--color-surface-inset);
+  transition: border-color .2s ease, box-shadow .2s ease;
   &:focus {
-    // border: 1px solid var(--ono-primary);
-    // box-shadow: 0 0 0 3px rgba(64, 141, 251, 0.16);
+    border-color: #818cf8;
+    box-shadow: 0 0 0 3px rgba(99, 102, 241, .12);
   }
 }
 .searchBoxInput::placeholder {
-  color: var(--ono-sub-text);
+  color: var(--color-ink-muted);
 }

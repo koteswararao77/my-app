@@ -27,15 +27,17 @@ const Register = () => {
     };
 
     return (
-        <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-indigo-600 via-blue-500 to-cyan-400 p-4">
-            <div className="w-full max-w-md bg-white/90 backdrop-blur-lg p-10 rounded-3xl shadow-2xl border border-white/30">
+        <div className="skeuo-auth min-h-screen flex items-center justify-center bg-slate-50 p-4 relative overflow-hidden">
+            <div className="absolute inset-0 bg-[radial-gradient(circle_at_15%_20%,rgba(129,140,248,.18),transparent_30%),radial-gradient(circle_at_85%_80%,rgba(96,165,250,.15),transparent_32%)]" />
+            <div className="skeuo-auth-card w-full max-w-md bg-white p-8 sm:p-10 rounded-2xl shadow-[0_20px_60px_rgba(30,41,59,.10)] border border-slate-100 relative">
 
                 {/* Logo / Header */}
                 <div className="text-center mb-8">
-                    <h2 className="text-3xl font-bold text-gray-800">
+                    <div className="w-11 h-11 mx-auto mb-5 rounded-xl bg-indigo-600 text-white flex items-center justify-center font-bold">D</div>
+                    <h2 className="text-2xl font-bold text-slate-900">
                         Create Account
                     </h2>
-                    <p className="text-gray-500 text-sm mt-2">
+                    <p className="text-slate-500 text-sm mt-2">
                         Start managing your account today
                     </p>
                 </div>
@@ -56,7 +58,7 @@ const Register = () => {
                                 name: e.target.value
                             })
                         }}
-                        className="w-full px-4 py-3 rounded-xl border border-gray-300 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent transition shadow-sm"
+                        className="w-full px-4 py-3 rounded-xl border border-slate-200 focus:outline-none focus:ring-4 focus:ring-indigo-100 focus:border-indigo-500 transition"
                     />
                 </div>
 
@@ -76,7 +78,7 @@ const Register = () => {
                                 email: e.target.value
                             })
                         }}
-                        className="w-full px-4 py-3 rounded-xl border border-gray-300 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent transition shadow-sm"
+                        className="w-full px-4 py-3 rounded-xl border border-slate-200 focus:outline-none focus:ring-4 focus:ring-indigo-100 focus:border-indigo-500 transition"
                     />
                 </div>
 
@@ -96,14 +98,14 @@ const Register = () => {
                                 password: e.target.value
                             })
                         }}
-                        className="w-full px-4 py-3 rounded-xl border border-gray-300 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent transition shadow-sm"
+                        className="w-full px-4 py-3 rounded-xl border border-slate-200 focus:outline-none focus:ring-4 focus:ring-indigo-100 focus:border-indigo-500 transition"
                     />
                 </div>
 
                 {/* Register Button */}
                 <button
                     onClick={handleRegister}
-                    className="w-full py-3 rounded-xl bg-gradient-to-r from-indigo-600 to-blue-600 text-white font-semibold shadow-lg hover:shadow-xl hover:scale-[1.02] active:scale-[0.98] transition duration-200"
+                    className="w-full py-3 rounded-xl bg-indigo-600 text-white font-semibold shadow-lg shadow-indigo-200 hover:bg-indigo-700 active:scale-[0.99] transition duration-200"
                 >
                     Create Account
                 </button>

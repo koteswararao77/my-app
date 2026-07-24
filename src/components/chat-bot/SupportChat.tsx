@@ -20,10 +20,10 @@ const SupportChat = () => {
 
     return (
 
-        <div className="flex items-center justify-center p-6">
-            <div className="w-[50%] h-[550px] rounded-3xl flex flex-col overflow-hidden">
+        <div className="skeuo-chat-wrap flex items-center justify-center p-6">
+            <div className="skeuo-chat w-[50%] h-[550px] rounded-3xl flex flex-col overflow-hidden">
                 {/* Header */}
-                <div className="px-6 py-4 bg-emerald-600 text-white flex items-center justify-between">
+                <div className="skeuo-chat-header px-6 py-4 text-white flex items-center justify-between">
                     <div>
                         <h2 className="text-lg font-semibold tracking-wide">
                             AI Support Assistant
@@ -37,7 +37,7 @@ const SupportChat = () => {
                 </div>
 
                 {/* Messages */}
-                <div className="flex-1 overflow-y-auto px-6 py-6 space-y-4 bg-white">
+                <div className="skeuo-chat-messages flex-1 overflow-y-auto px-6 py-6 space-y-4">
                     {messages.map((msg, index) => (
                         <div
                             key={index}
@@ -91,7 +91,7 @@ const SupportChat = () => {
                 </div>
 
                 {/* Input */}
-                <div className="p-5 border-t border-gray-200 bg-white flex items-center gap-3">
+                <div className="skeuo-chat-input p-5 flex items-center gap-3">
                     <input
                         value={input}
                         onChange={(e) => setInput(e.target.value)}

@@ -28,7 +28,7 @@ const Sidebar = () => {
   };
 
   return (
-    <div className="w-64 fixed left-0 top-0 h-full bg-white flex flex-col p-4">
+    <aside className="app-sidebar w-64 fixed left-0 top-0 h-full flex flex-col p-4">
 
       {/* Logo / Title */}
       {/* <div className="mb-6 mt-1">
@@ -36,23 +36,25 @@ const Sidebar = () => {
           Demo Workspace
         </h1>
       </div> */}
-      <div className="mb-6 mt-1">
-        <h1 className="text-xl font-bold bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 bg-clip-text text-transparent animate-gradient">
-          Demo Workspace
-        </h1>
+      <div className="mb-9 mt-2 px-2 flex items-center gap-3">
+        <div className="brand-mark">D</div>
+        <div>
+          <h1 className="text-base font-bold text-slate-900">Demo Workspace</h1>
+          <p className="text-xs text-slate-400 mt-0.5">Admin console</p>
+        </div>
       </div>
 
       {/* Navigation */}
-      <nav className="flex flex-col gap-2 bg-white">
+      <nav className="flex flex-col gap-1.5">
         {navItems.map((item) => (
           <NavLink
             key={item.path}
             to={item.path}
             className={({ isActive }) =>
-              `flex items-center gap-3 px-4 py-3 rounded-lg transition-all duration-200
+              `nav-item flex items-center gap-3 px-3.5 py-2.5 rounded-xl transition-all duration-200
               ${isActive
-                ? "bg-emerald-600 text-white shadow-md"
-                : "hover:bg-slate-800 hover:text-white text-slate-400"
+                ? "nav-item-active text-white shadow-sm"
+                : "text-slate-500"
               }`
             }
           >
@@ -63,7 +65,7 @@ const Sidebar = () => {
       </nav>
 
       {/* Bottom Section */}
-      <div className="mt-auto pt-6 border-t">
+      <div className="mt-auto pt-5 border-t border-slate-100">
         <Button
           variant="danger"
           onClick={handleLogout}
@@ -73,7 +75,7 @@ const Sidebar = () => {
         </Button>
       </div>
 
-    </div>
+    </aside>
   );
 };
 
